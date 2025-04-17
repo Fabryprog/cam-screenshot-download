@@ -17,7 +17,7 @@ while true; do
     FILENAME="$CARTELLA/screenshot_$TIMESTAMP.jpg"
 
     # Cattura lo screenshot
-    ffmpeg -rtsp_transport tcp -y -i "$RTSP_URL" -frames:v 1 "$FILENAME"
+    timeout 10 ffmpeg -rtsp_transport tcp -y -i "$RTSP_URL" -frames:v 1 "$FILENAME"
 
     echo "Screenshot salvato: $FILENAME"
 

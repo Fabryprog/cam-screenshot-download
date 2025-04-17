@@ -1,7 +1,7 @@
 FROM alpine:latest
 
 # Installa FFmpeg
-RUN apk update && apk add --no-cache ffmpeg bash
+RUN apk update && apk add --no-cache ffmpeg bash coreutils
 
 # Imposta directory di lavoro
 WORKDIR /app
